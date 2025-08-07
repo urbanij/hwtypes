@@ -1,0 +1,23 @@
+version = 1
+revision = 2
+requires-python = ">=3.13"
+
+[[package]]
+name = "hwtypes"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "pysmt" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "pysmt", specifier = ">=0.9.6" }]
+
+[[package]]
+name = "pysmt"
+version = "0.9.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/48/4d/a972e021606eb56828b339842ec523d164879c4b62dcd2c5e4404355d10e/PySMT-0.9.6.tar.gz", hash = "sha256:e101927b65d66f7929ce9bfc4ad2d1e6914449575807fa37e9c810934c8a5d09", size = 262806, upload-time = "2024-06-24T19:01:57.852Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/79/0a/4e0369b2a4ce40a5b2e2bdf09e7be32e39eb0511a9ca7eb3f921d4cc03af/PySMT-0.9.6-py2.py3-none-any.whl", hash = "sha256:41e9afed77d4d21930ee3abfd77b4c28189e579225d8def96e9fab6059a7ffce", size = 326100, upload-time = "2024-06-24T19:01:55.204Z" },
+]
