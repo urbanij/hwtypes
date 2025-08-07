@@ -1,9 +1,11 @@
 [project]
 name = "hwtypes"
-version = "0.1.0"
-description = "Add your description here"
+version = "1.5.0"
+description = "Python implementations of fixed size hardware types (Bit, BitVector, UInt, SInt, ...) based on the SMT-LIB2 semantics"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "pysmt>=0.9.6",
-]
+requires-python = ">=3.6"
+authors = [{ name = "Leonard Truong", email = "lenny@cs.stanford.edu" }]
+dependencies = ["pysmt", "z3-solver", "gmpy2"]
+
+[tool.setuptools]
+packages = ["hwtypes"]
