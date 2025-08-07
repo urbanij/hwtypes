@@ -39,6 +39,8 @@ def bit_cast(fn : tp.Callable[['Bit', 'Bit'], 'Bit']) -> tp.Callable[['Bit', tp.
 
 
 class Bit(AbstractBit):
+    __match_args__ = ("value",)  # Enables positional matching
+
     @staticmethod
     def get_family() -> TypeFamily:
         return _Family_
@@ -56,6 +58,10 @@ class Bit(AbstractBit):
             self._value = bool(value)
         else:
             raise TypeError("Can't coerce {} to Bit".format(type(value)))
+
+    @property
+    def value(self):
+        return self._value
 
     def __invert__(self):
         return type(self)(not self._value)
